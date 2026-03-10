@@ -412,7 +412,7 @@ img {
 
 
 .experiencia__description ul{
-  list-style: square;
+  list-style: none;
   
 }
 
@@ -451,7 +451,7 @@ height: 7em;
 .proyectos__data {
     text-align: center;
     padding: 1.5rem;
-    min-height: auto;
+    height: 600px;
     border-radius: 0.5rem;
     box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
     transition: 0.5s !important;
@@ -460,11 +460,24 @@ height: 7em;
     margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .proyectos__container {
+    flex-direction: row;
+  }
+}
+
 .titulo_proyectos {
   color: var(--first-color);
   margin-bottom: 1.5rem; /* Separa el título del párrafo */
     display: block;        /* Asegura que el margen funcione correctamente */
   
+}
+
+.portafolio__img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 
@@ -475,6 +488,10 @@ height: 7em;
   margin-bottom: 2.5rem; /* Separa el párrafo del botón */
     line-height: 1.6;      /* Mejora la lectura al separar las líneas de texto */
     padding: 0 1rem;       /* Margen interno para que el texto no toque los bordes */
+}
+
+.proyectos__description {
+    height: 250px;
 }
 
 .boton_proyectos a {
@@ -494,6 +511,10 @@ height: 7em;
   transform: scale(1.1) !important; /* Subimos a 1.1 para que el cambio sea muy obvio */
     z-index: 100;
    
+}
+
+.proyectos__data:nth-child(2) .boton_proyectos {
+    margin-top: 30px;
 }
 
 
